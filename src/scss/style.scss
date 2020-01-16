@@ -1,0 +1,137 @@
+/* All fonts  */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap');
+
+/* Defaulting Everything */
+*,::before,::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+html{
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+// main
+
+.App{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.nav-bar{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    margin-bottom: 20px;
+    .nav-title{
+        font-size: 2rem;
+        color: #fff;
+        font-weight: 700;
+    }
+}
+
+.items-list{
+    .list-item{
+        position: relative;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 0;
+        padding: 20px 0px;
+        &:nth-child(1){
+            border-radius: 10px 10px 0px 0px;
+        }
+        &:nth-last-child(1){
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 10px 10px;
+        }
+        .list-item-title{
+            cursor: default;
+            padding: 0px 55px 0px 55px;
+            font-size: 1rem;
+        }
+        .CheckBox{
+            cursor: pointer;
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            background-color: #19d898;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 30px;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 3px;
+                background-color: #fff;
+                transform: translate(-50%, -50%) rotateZ(-45deg);
+                top: 50%;
+                left: 60%;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                width: 7px;
+                height: 3px;
+                background-color: #fff;
+                transform: translate(-50%, -50%) rotateZ(45deg);
+                top: 60%;
+                left: 35%;
+            }
+        }
+        .delete-btn{
+            cursor: pointer;
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 30px;
+            background-color: #fc223f;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            right: 10px;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 14px;
+                height: 3px;
+                background-color: #fff;
+                transform: translate(-50%, -50%) rotateZ(45deg);
+                top: 50%;
+                left: 50%;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                width: 14px;
+                height: 3px;
+                background-color: #fff;
+                transform: translate(-50%, -50%) rotateZ(-45deg);
+                top: 50%;
+                left: 50%;
+            }
+        }
+    }
+}
